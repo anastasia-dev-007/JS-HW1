@@ -211,3 +211,48 @@ console.log(currencyConverter(10, "USD"));
 console.log(currencyConverter(10, "RON"));
 console.log(currencyConverter(10, "MDL"));
 console.log(currencyConverter(10, "GBP"));
+
+
+
+//Update 2
+
+function currencyConverter(amount, fromCurrency, toCurrency) {
+  const rateUSD = 0.9;
+const rateMDL = 0.05;
+const rateRON = 0.2;
+  const rateEUR = 1;
+ 
+
+    if (fromCurrency === "USD" & toCurrency === "EUR") {
+        return amount * rateUSD + "EUR";
+    } else if (fromCurrency === "MDL" & toCurrency === "EUR") {
+        return amount * rateMDL + "EUR";
+    } else if (fromCurrency === "RON" & toCurrency === "EUR") {
+        return amount * rateRON + "EUR";
+    } else if (fromCurrency === "USD" & toCurrency === "MDL") {
+        return amount * rateUSD / rateMDL + "MDL";
+    } else if (fromCurrency === "MDL" & toCurrency === "USD") {
+        return amount * rateMDL / rateUSD + "USD";
+         } else if (fromCurrency === "USD" & toCurrency === "RON") {
+        return amount * rateUSD / rateRON + "RON";
+    } else if (fromCurrency === "RON" & toCurrency === "USD") {
+        return amount * rateRON / rateUSD + "USD";
+    } else if (fromCurrency === "RON" & toCurrency === "MDL") {
+        return amount * rateRON /rateMDL + "MDL";
+         } else if (fromCurrency === "MDL" & toCurrency === "RON") {
+        return amount * rateMDL / rateRON + "RON";
+    } else {
+        return "no exchange from " + fromCurrency + " to" + toCurrency;
+    }
+}
+
+console.log(currencyConverter(10,"USD","EUR"));
+console.log(currencyConverter(10,"RON","EUR"));
+console.log(currencyConverter(10,"MDL","EUR"));
+console.log(currencyConverter(10,"USD","RON"));
+console.log(currencyConverter(10,"USD","MDL"));
+console.log(currencyConverter(10,"MDL","USD"));
+console.log(currencyConverter(10,"MDL","RON"));
+console.log(currencyConverter(10,"RON","USD"));
+console.log(currencyConverter(10,"RON","MDL"));
+console.log(currencyConverter(10,"GBP","EUR"));
