@@ -185,3 +185,29 @@ console.log(currencyConverter(10, "EUR"))
 console.log(currencyConverter(10, "USD"))
 console.log(currencyConverter(10, "RON"))
 console.log(currencyConverter(10, "MDL"))
+
+
+//Updated task with currency converter
+
+function currencyConverter(amount, currency) {
+  const rateUSD = 0.9;
+const rateMDL = 0.05;
+const rateRON = 0.2;
+  const rateEUR = 1;
+ 
+
+    if (currency === "USD") {
+        return amount * rateUSD + "EUR";
+    } else if (currency === "MDL") {
+        return amount * rateMDL + "EUR";
+    } else if (currency === "RON") {
+        return amount * rateRON + "EUR";
+    } else {
+        return "no exchange of" + currency + "to EUR";
+    }
+}
+
+console.log(currencyConverter(10, "USD"));
+console.log(currencyConverter(10, "RON"));
+console.log(currencyConverter(10, "MDL"));
+console.log(currencyConverter(10, "GBP"));
