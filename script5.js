@@ -265,10 +265,11 @@ function currencyConverter(amount, fromCurrency, toCurrency) {
             return "no exchange of " + fromCurrency + " in " + toCurrency;
         }
     }
-
-    if (fromCurrency !== "EUR" && fromCurrency !== "RON" && fromCurrency !== "MDL" && fromCurrency !== "USD") {
+     
+    /*else adaugat*/
+    else {
         return "no exchange of " + fromCurrency + " in " + toCurrency;
-    }
+    } 
 }
 
 console.log(currencyConverter(10, "USD", "EUR"));// Output: 9EUR
