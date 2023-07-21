@@ -228,9 +228,7 @@ function currencyConverter(amount, fromCurrency, toCurrency) {
         } else {
             return "no exchange of " + fromCurrency + " in " + toCurrency;
         }
-    }
-
-    if (fromCurrency === "EUR") {
+    } else if (fromCurrency === "EUR") {
         if (toCurrency === "MDL") {
             return amount / rateMDL + "MDL";
         } else if (toCurrency === "USD") {
@@ -240,9 +238,7 @@ function currencyConverter(amount, fromCurrency, toCurrency) {
         } else {
             return "no exchange of " + fromCurrency + " in " + toCurrency;
         }
-    }
-
-    if (fromCurrency === "RON") {
+    } else if (fromCurrency === "RON") {
         if (toCurrency === "EUR") {
             return amount * rateRON + "EUR";
         } else if (toCurrency === "USD") {
@@ -252,9 +248,7 @@ function currencyConverter(amount, fromCurrency, toCurrency) {
         } else {
             return "no exchange of " + fromCurrency + " in " + toCurrency;
         }
-    }
-
-    if (fromCurrency === "USD") {
+    } else if (fromCurrency === "USD") {
         if (toCurrency === "EUR") {
             return amount * rateUSD + "EUR";
         } else if (toCurrency === "RON") {
@@ -264,10 +258,7 @@ function currencyConverter(amount, fromCurrency, toCurrency) {
         } else {
             return "no exchange of " + fromCurrency + " in " + toCurrency;
         }
-    }
-     
-    /*else adaugat*/
-    else {
+    } else {
         return "no exchange of " + fromCurrency + " in " + toCurrency;
     } 
 }
